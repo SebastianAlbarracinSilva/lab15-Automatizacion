@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "target": "192.168.216.128",
+    "mode": "ip",
+    "started": "2026-11-16T17:21:46",
+    "finished": "2026-11-16T17:21:51"
+  },
+  "nmap": {
+    "status": "ok",
+    "scan_args": "-sV --open --top-ports 100 -oX -",
+    "hosts": [
+      {
+        "ip": "192.168.216.128",
+        "hostname": null,
+        "open_ports": [
+          {
+            "port": 22,
+            "service": "ssh",
+            "version": "OpenSSH 10.6p1 Debian 1"
+          }
+        ]
+      }
+    ]
+  },
+  "dig": {
+    "status": "ok",
+    "reverse_dns": []
+  },
+  "whois": {
+    "status": "ok",
+    "organization": "Internet Assigned Numbers Authority",
+    "country": "US",
+    "network": "192.168.0.0 - 192.168.255.255"
+  }
+}

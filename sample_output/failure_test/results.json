@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "target": "example.com",
+    "mode": "domain",
+    "started": "2026-11-16T17:21:57",
+    "finished": "2026-11-16T17:21:57"
+  },
+  "whois": {
+    "status": "error",
+    "error": "whois no esta instalado"
+  },
+  "dig": {
+    "status": "error",
+    "records": {
+      "A": [],
+      "MX": [],
+      "NS": [],
+      "TXT": []
+    },
+    "errors": {
+      "A": "dig no esta instalado",
+      "MX": "dig no esta instalado",
+      "NS": "dig no esta instalado",
+      "TXT": "dig no esta instalado"
+    }
+  },
+  "curl": {
+    "status": "error",
+    "error": "curl no esta instalado"
+  }
+}

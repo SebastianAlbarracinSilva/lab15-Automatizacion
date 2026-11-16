@@ -1,0 +1,16 @@
+2026-11-16 17:21:46,634 INFO START recon target=192.168.216.128 mode=ip argv=recon.py 192.168.216.128 --output sample_output/ip --verbose
+2026-11-16 17:21:46,634 INFO STAGE nmap start
+2026-11-16 17:21:46,634 INFO RUN nmap -sV --open --top-ports 100 -oX - 192.168.216.128
+2026-11-16 17:21:51,078 INFO OK nmap -sV --open --top-ports 100 -oX - 192.168.216.128 | exit=0 | 4.44s | stdout=2360B stderr=0B
+2026-11-16 17:21:51,079 INFO STAGE nmap end status=ok
+2026-11-16 17:21:51,079 INFO STAGE dig start
+2026-11-16 17:21:51,079 INFO RUN dig +short +time=3 +tries=2 -x 192.168.216.128
+2026-11-16 17:21:51,174 INFO OK dig +short +time=3 +tries=2 -x 192.168.216.128 | exit=0 | 0.10s | stdout=0B stderr=0B
+2026-11-16 17:21:51,174 INFO STAGE dig end status=ok
+2026-11-16 17:21:51,174 INFO STAGE whois start
+2026-11-16 17:21:51,174 INFO RUN whois 192.168.216.128
+2026-11-16 17:21:51,479 INFO OK whois 192.168.216.128 | exit=0 | 0.30s | stdout=2781B stderr=0B
+2026-11-16 17:21:51,479 INFO STAGE whois end status=ok
+2026-11-16 17:21:51,480 INFO WRITE sample_output/ip/results.json
+2026-11-16 17:21:51,480 INFO WRITE sample_output/ip/report.md
+2026-11-16 17:21:51,480 INFO END recon target=192.168.216.128 failed_stages=none

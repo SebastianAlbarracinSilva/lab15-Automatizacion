@@ -1,0 +1,22 @@
+2026-11-16 17:21:51,566 INFO START recon target=example.com mode=domain argv=recon.py example.com --output sample_output/domain --verbose
+2026-11-16 17:21:51,566 INFO STAGE whois start
+2026-11-16 17:21:51,567 INFO RUN whois example.com
+2026-11-16 17:21:52,490 INFO OK whois example.com | exit=0 | 0.92s | stdout=3502B stderr=0B
+2026-11-16 17:21:52,491 INFO STAGE whois end status=partial
+2026-11-16 17:21:52,491 INFO STAGE dig start
+2026-11-16 17:21:52,491 INFO RUN dig +short +time=3 +tries=2 example.com A
+2026-11-16 17:21:52,526 INFO OK dig +short +time=3 +tries=2 example.com A | exit=0 | 0.03s | stdout=29B stderr=0B
+2026-11-16 17:21:52,526 INFO RUN dig +short +time=3 +tries=2 example.com MX
+2026-11-16 17:21:52,558 INFO OK dig +short +time=3 +tries=2 example.com MX | exit=0 | 0.03s | stdout=4B stderr=0B
+2026-11-16 17:21:52,558 INFO RUN dig +short +time=3 +tries=2 example.com NS
+2026-11-16 17:21:52,607 INFO OK dig +short +time=3 +tries=2 example.com NS | exit=0 | 0.05s | stdout=51B stderr=0B
+2026-11-16 17:21:52,607 INFO RUN dig +short +time=3 +tries=2 example.com TXT
+2026-11-16 17:21:52,642 INFO OK dig +short +time=3 +tries=2 example.com TXT | exit=0 | 0.03s | stdout=49B stderr=0B
+2026-11-16 17:21:52,642 INFO STAGE dig end status=ok
+2026-11-16 17:21:52,642 INFO STAGE curl start
+2026-11-16 17:21:52,642 INFO RUN curl -sS -I -L --max-time 15 https://example.com
+2026-11-16 17:21:52,728 INFO OK curl -sS -I -L --max-time 15 https://example.com | exit=0 | 0.09s | stdout=280B stderr=0B
+2026-11-16 17:21:52,728 INFO STAGE curl end status=ok
+2026-11-16 17:21:52,729 INFO WRITE sample_output/domain/results.json
+2026-11-16 17:21:52,729 INFO WRITE sample_output/domain/report.md
+2026-11-16 17:21:52,729 INFO END recon target=example.com failed_stages=none

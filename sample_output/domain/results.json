@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "target": "example.com",
+    "mode": "domain",
+    "started": "2026-11-16T17:21:51",
+    "finished": "2026-11-16T17:21:52"
+  },
+  "whois": {
+    "status": "partial",
+    "registrar": "RESERVED-Internet Assigned Numbers Authority",
+    "registration_date": "1995-08-14T04:00:00Z",
+    "expiry_date": "2027-08-13T04:00:00Z",
+    "registrant_organization": null
+  },
+  "dig": {
+    "status": "ok",
+    "records": {
+      "A": [
+        "172.66.147.243",
+        "104.20.23.154"
+      ],
+      "MX": [
+        "0 ."
+      ],
+      "NS": [
+        "hera.ns.cloudflare.com.",
+        "elliott.ns.cloudflare.com."
+      ],
+      "TXT": [
+        "\"v=spf1 -all\"",
+        "\"_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9\""
+      ]
+    }
+  },
+  "curl": {
+    "status": "ok",
+    "url": "https://example.com",
+    "status_line": "HTTP/2 200",
+    "headers": {
+      "server": "cloudflare",
+      "x-powered-by": null,
+      "content-security-policy": null,
+      "strict-transport-security": null,
+      "x-frame-options": null
+    },
+    "missing_security_headers": [
+      "Content-Security-Policy (CSP)",
+      "Strict-Transport-Security (HSTS)",
+      "X-Frame-Options"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+2026-11-16 17:21:57,343 INFO START recon target=example.com mode=domain argv=recon.py example.com --output /tmp/recon_sin_herramientas
+2026-11-16 17:21:57,343 INFO STAGE whois start
+2026-11-16 17:21:57,343 INFO RUN whois example.com
+2026-11-16 17:21:57,344 ERROR FAIL whois example.com | herramienta no encontrada
+2026-11-16 17:21:57,344 INFO STAGE whois end status=error
+2026-11-16 17:21:57,344 INFO STAGE dig start
+2026-11-16 17:21:57,344 INFO RUN dig +short +time=3 +tries=2 example.com A
+2026-11-16 17:21:57,345 ERROR FAIL dig +short +time=3 +tries=2 example.com A | herramienta no encontrada
+2026-11-16 17:21:57,345 INFO RUN dig +short +time=3 +tries=2 example.com MX
+2026-11-16 17:21:57,345 ERROR FAIL dig +short +time=3 +tries=2 example.com MX | herramienta no encontrada
+2026-11-16 17:21:57,345 INFO RUN dig +short +time=3 +tries=2 example.com NS
+2026-11-16 17:21:57,345 ERROR FAIL dig +short +time=3 +tries=2 example.com NS | herramienta no encontrada
+2026-11-16 17:21:57,346 INFO RUN dig +short +time=3 +tries=2 example.com TXT
+2026-11-16 17:21:57,346 ERROR FAIL dig +short +time=3 +tries=2 example.com TXT | herramienta no encontrada
+2026-11-16 17:21:57,346 INFO STAGE dig end status=error
+2026-11-16 17:21:57,346 INFO STAGE curl start
+2026-11-16 17:21:57,346 INFO RUN curl -sS -I -L --max-time 15 https://example.com
+2026-11-16 17:21:57,346 ERROR FAIL curl -sS -I -L --max-time 15 https://example.com | herramienta no encontrada
+2026-11-16 17:21:57,346 INFO RUN curl -sS -I -L --max-time 15 http://example.com
+2026-11-16 17:21:57,347 ERROR FAIL curl -sS -I -L --max-time 15 http://example.com | herramienta no encontrada
+2026-11-16 17:21:57,347 INFO STAGE curl end status=error
+2026-11-16 17:21:57,347 INFO WRITE /tmp/recon_sin_herramientas/results.json
+2026-11-16 17:21:57,347 INFO WRITE /tmp/recon_sin_herramientas/report.md
+2026-11-16 17:21:57,347 INFO END recon target=example.com failed_stages=['whois', 'dig', 'curl']
