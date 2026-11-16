@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.991 scan initiated Mon Nov 16 17:03:16 2026 as: /usr/lib/nmap/nmap -&#45;privileged -sV -&#45;open -p 1-1024 -oX scan.xml 192.168.216.128 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -&#45;privileged -sV -&#45;open -p 1-1024 -oX scan.xml 192.168.216.128" start="1794866596" startstr="Mon Nov 16 17:03:16 2026" version="7.991" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1024" services="1-1024"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1794866596" endtime="1794866607"><status state="up" reason="localhost-response" reason_ttl="0"/>
+<address addr="192.168.216.128" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="1020">
+<extrareasons reason="no-response" count="1020" proto="tcp" ports="1-21,23-209,211-554,556-887,889-1024"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="10.6p1 Debian 1" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:10.6p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="210"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="SimpleHTTPServer" version="0.6" extrainfo="Python 3.14.7" method="probed" conf="10"><cpe>cpe:/a:python:simplehttpserver:0.6</cpe></service></port>
+<port protocol="tcp" portid="555"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="SimpleHTTPServer" version="0.6" extrainfo="Python 3.14.7" method="probed" conf="10"><cpe>cpe:/a:python:simplehttpserver:0.6</cpe></service></port>
+<port protocol="tcp" portid="888"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="SimpleHTTPServer" version="0.6" extrainfo="Python 3.14.7" method="probed" conf="10"><cpe>cpe:/a:python:simplehttpserver:0.6</cpe></service></port>
+</ports>
+<times srtt="32" rttvar="1200" to="100000"/>
+</host>
+<runstats><finished time="1794866607" timestr="Mon Nov 16 17:03:27 2026" summary="Nmap done at Mon Nov 16 17:03:27 2026; 1 IP address (1 host up) scanned in 10.96 seconds" elapsed="10.96" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
