@@ -1,0 +1,78 @@
+{
+  "attacker_ips": {
+    "103.75.12.44": 48,
+    "91.240.118.7": 27
+  },
+  "invalid_user_lines_added": 31,
+  "successful_login_after_failures": "91.240.118.7",
+  "traffic_spike": {
+    "hour": 4,
+    "source_ip": "198.51.100.77",
+    "extra_requests": 900
+  },
+  "attack_paths": [
+    {
+      "path": "/?id=1'%20UNION%20SELECT%201,2,3--",
+      "family": "sqli",
+      "custom": false,
+      "sent_by": [
+        "103.75.12.44",
+        "91.240.118.7"
+      ]
+    },
+    {
+      "path": "/admin/..%2f..%2f..%2fetc/passwd",
+      "family": "path_traversal",
+      "custom": false,
+      "sent_by": [
+        "103.75.12.44",
+        "91.240.118.7"
+      ]
+    },
+    {
+      "path": "/search?q=%3Cscript%3Ealert(1)%3C/script%3E",
+      "family": "xss",
+      "custom": false,
+      "sent_by": [
+        "103.75.12.44",
+        "91.240.118.7"
+      ]
+    },
+    {
+      "path": "/cgi-bin/test.cgi?cmd=id%3Bcat%20/etc/passwd",
+      "family": "command_injection",
+      "custom": false,
+      "sent_by": [
+        "103.75.12.44",
+        "91.240.118.7"
+      ]
+    },
+    {
+      "path": "/download?file=%252e%252e%252f%252e%252e%252fetc%252fpasswd",
+      "family": "path_traversal",
+      "custom": true,
+      "sent_by": [
+        "103.75.12.44",
+        "91.240.118.7"
+      ]
+    },
+    {
+      "path": "/item?id=1%20UN/**/ION%20SEL/**/ECT%20user,password%20FROM%20users--",
+      "family": "sqli",
+      "custom": true,
+      "sent_by": [
+        "103.75.12.44",
+        "91.240.118.7"
+      ]
+    },
+    {
+      "path": "/search?q=%3Csvg%20onload%3Dalert(1)%3E",
+      "family": "xss",
+      "custom": true,
+      "sent_by": [
+        "103.75.12.44",
+        "91.240.118.7"
+      ]
+    }
+  ]
+}
