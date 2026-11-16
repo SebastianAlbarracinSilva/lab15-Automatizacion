@@ -1,0 +1,29 @@
+{
+  "target": "192.168.216.128",
+  "scan_time_seconds": 0.08,
+  "timestamp": "2026-11-16T16:59:05",
+  "open_ports": [
+    22,
+    210,
+    555,
+    888
+  ],
+  "rate": 2000,
+  "ports_scanned": 1024,
+  "outcomes": {
+    "closed": 1014,
+    "open": 4,
+    "error": 6
+  },
+  "error_codes": {
+    "24": 6
+  },
+  "error_ports": [
+    1019,
+    1020,
+    1021,
+    1022,
+    1023,
+    1024
+  ]
+}
